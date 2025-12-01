@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cameron Craig Photography</title>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600&display=swap&family=Material+Icons" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: 'Spectral', serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      line-height: 1.6;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: #434343;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo img { height: 80px; }
+
+    nav .nav-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 1.05rem;
+    }
+    nav a:hover { color: #FFD700; }
+
+    .icon-link i {
+      font-size: 22px;
+      color: #fff;
+      transition: color 0.3s ease;
+    }
+    .icon-link i:hover { color: #0077cc; }
+
+    .hero {
+      margin-top: 0px; /* clears fixed nav */
+	  padding-top: 120px;
+      height: 100vh;
+      background: url('images/heroImages/DSC07196.jpg') center center no-repeat;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+      font-weight: 300;
+      padding: 0 20px;
+      text-align: center;
+      position: relative;
+    }
+    .hero h1 { font-size: 2.5rem; margin: 0; }
+
+    .intro {
+      padding: 0px 20px;
+      max-width: 900px;
+      margin: 20px auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+      background: #fff;
+    }
+    .intro img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 6px;
+		order: 1;
+    }
+    .intro .text {
+      flex: 1;
+      min-width: 250px;
+      max-width: 400px;
+		order: 2;
+    }
+
+    .portfolio-preview {
+      padding: 0px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .preview-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .preview-item {
+      text-align: center;
+      text-decoration: none;
+      color: #000;
+      max-width: 360px;
+    }
+    .preview-item img {
+      width: 100%;
+      max-width: 360px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .preview-item img:hover { transform: scale(1.03); }
+    .preview-item p {
+      margin-top: 10px;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    .contact-wrapper {
+      margin-top: 40px;
+      padding: 40px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .contact-info, .contact-iframe {
+      flex: 1;
+      min-width: 300px;
+      max-width: 480px;
+    }
+    .contact-iframe {
+      border-left: 1px solid #ccc;
+      padding-left: 30px;
+    }
+    .contact-iframe iframe {
+      width: 100%;
+      height: 1000px; /* fixed large size */
+      border: none;
+      border-radius: 0px;
+    }
+
+    footer {
+      padding: 20px 40px;
+      font-size: 0.9rem;
+      background: #434343;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .footer-socials {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      flex-direction: row; /* horizontal by default */
+    }
+    .footer-socials img {
+      height: 20px;
+      width: 20px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+    /* Mobile view adjustments */
+    @media screen and (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+      }
+      nav .logo {
+        margin-bottom: 10px;
+        text-align: center;
+      }
+      nav .nav-links { justify-content: center; }
+      /* Account icon locked top right */
+      .icon-link {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+      }
+		.intro {padding: 0px}
+		.intro img {border-radius: 0px; order: 3;}
+		.intro text {padding: 0 20px; }
+		.intro h2 {padding: 0 20px; order: 1;}
+		.intro p {padding: 0 20px; order: 2;}
+		.portfolio-preview {padding: 0px 0px;}
+		.preview-item {max-width: 480px}
+		.preview-item img {padding:0px;border-radius: 0px;max-width: 480px}
+		.hero {
+    background: url('images/heroImagesMobile/DSC07198.jpg') center center no-repeat;
+    background-size: cover;
+  }
+      /* Social icons horizontal */
+      .footer-socials {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        margin-top: 10px;
+      }
+		.contact-wrapper {max-width: 100%}
+		      .contact-info {
+        /* remove line on mobile */
+        padding: 15px;      /* add padding from screen edge */
+      }
+		 .contact-iframe { border-left: none;
+        max-width: 100%;
+			 padding: 0px;
+        flex: 1 1 100%;
+      }
+      .contact-iframe iframe { width: 100vw; height: 600px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logos/Logo Transparent background white to the right copy.png" alt="Logo">
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="account.html" class="icon-link">
+        <i class="material-icons">person_outline</i>
+      </a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <h1>Cameron Craig Photography</h1>
+  </div>
+
+  <section class="intro">
+    <img src="images/portraits/20240109_091404.jpg" alt="Cameron Craig portrait">
+    <div class="text">
+      <h2>Let’s Tell Your Story</h2>
+      <p>Photography is about story telling. Capturing moments in photos that bring us back years to come. It's a way of connecting with others, and provides us with something tangible to share our memories and emotions.</p>
+    </div>
+  </section>
+
+  <section class="portfolio-preview">
+	  <div class="text"><br>
+		<h2>What Services Do i Offer?</h2>
+	  		<p>Photography and videography services along with post production editing. Tours, Trips, Birthdays, Ceremonies, Weddings, Corperate Functions, Portraits, Pet Photos, you name it. Services are offered on a time basis and include an equivalent amount of time of post production. Additional time can be arranged on either end. Larger events I would recommend a scoping session prior to the event.  </p></div>
+    <div class="preview-grid">
+      <a href="portfolio.html" class="preview-item">
+        <img src="images/events/TreeTop.1709.6.JPG" alt="Events">
+        <p>Events</p>
+      </a>
+      <a href="portfolio.html" class="preview-item">
+        <img src="images/events/DSC01738.jpg" alt="Birthdays & Weddings">
+        <p>Birthdays and Weddings</p>
+      </a>
+      <a href="portfolio.html" class="preview-item">
+        <img src="images/events/dsc02551.jpg" alt="Corporate Functions">
+        <p>Corporate Functions</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="contact-wrapper">
+    <div class="contact-info">
+      <h2>Let’s Connect</h2>
+      <p>Email: <a href="mailto:contact@cameroncraigphotography.com">contact@cameroncraigphotography.com</a></p>
+      <p>Toronto, ON</p>
+    </div>
+    <div class="contact-iframe">
+      <iframe src="https://MIurl.cc/16o1q51mI" title="Booking Calendar"></iframe>
+    </div>
+  </section>
+
+   <footer>
+    <p>&copy; 2025 Cameron Craig Photography. All rights reserved.</p>
+    <div class="footer-socials">
+      <a href="https://wa.me/19057169390" target="_blank">
+        <img src="images/icons/whatsappwhite.png" alt="WhatsApp">
+      </a>
+      <a href="https://instagram.com/CamCraigPhotos" target="_blank">
+        <img src="images/icons/instagram transparent background.png" alt="Instagram">
+      </a>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+
+
