@@ -127,12 +127,13 @@
     }
 
     .contact-wrapper {
-      margin-top: 10px;
-      padding: 10px 10px;
+      margin-top: 0px;
+      padding: 0px;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 30px;
+	  width: 100%
       max-width: 1000px;
       margin-left: auto;
       margin-right: auto;
@@ -143,14 +144,16 @@
       max-width: 480px;
     }
     .contact-iframe {
-      border-left: 1px solid #ccc;
-      padding-left: 10px;
-	  padding-right: 10px;
+      border-left: none;
+      padding: 0px
+	  max-width:100%
+	  width:100%
     }
     .contact-iframe iframe {
-      width: 100%;
+      width: 100vw;
       height: 800px; /* fixed large size */
       border: none;
+	  display: block;
       border-radius: 0px;
     }
 
@@ -304,6 +307,7 @@
 
 </body>
 </html>
+
 
 
 
