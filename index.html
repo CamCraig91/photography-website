@@ -10,24 +10,7 @@
 
   gtag('config', 'G-9916Y2RTV0');
 </script>
-	<!-- Google Opt Out Of cookies -->
-	<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
-<script>
-window.addEventListener("load", function(){
-  window.cookieconsent.initialise({
-    palette: {
-      popup: { background: "#502c0e" },
-      button: { background: "#ffffff", text: "#502c0e" }
-    },
-    content: {
-      message: "We use cookies to track analytics and improve your experience.",
-      dismiss: "Accept",
-      link: "Learn more",
-      href: "/privacy"
-    }
-  })
-})
-</script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<meta name="description" content=“Cameron Craig Photography – professional portrait, event, marketing and landscape photography in Ontario. Explore my portfolio.”>
@@ -363,9 +346,38 @@ window.addEventListener("load", function(){
       </a>
     </div>
   </footer>
+<!-- Cookie Consent Banner -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+  window.cookieconsent.initialise({
+    palette: {
+      popup: {
+        background: "#2c2c2c",  // dark gray
+        text: "#f5f5f5"          // soft white
+      },
+      button: {
+        background: "#f5f5f5",   // soft white
+        text: "#2c2c2c"          // dark gray
+      }
+    },
+    position: "bottom-right",   // 👈 floats bottom right
+    theme: "classic",           // clean layout
+    type: "opt-out",            // GA runs unless opted out
+    content: {
+      message: "We use cookies to improve your experience and track analytics.",
+      dismiss: "Got it",
+      link: "Privacy",
+      href: "/privacy"
+    }
+  });
+});
+</script>
 
 </body>
 </html>
+
 
 
 
