@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google Opt Out Of cookies -->
+	<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+  window.cookieconsent.initialise({
+    palette: {
+      popup: { background: "#502c0e" },
+      button: { background: "#ffffff", text: "#502c0e" }
+    },
+    content: {
+      message: "We use cookies to track analytics and improve your experience.",
+      dismiss: "Accept",
+      link: "Learn more",
+      href: "/privacy"
+    }
+  })
+})
+</script>
+
 	<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9916Y2RTV0"></script>
 <script>
@@ -191,6 +210,7 @@
 
 </body>
 </html>
+
 
 
 
