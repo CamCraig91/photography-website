@@ -10,6 +10,24 @@
 
   gtag('config', 'G-9916Y2RTV0');
 </script>
+	<!-- Google Opt Out Of cookies -->
+	<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+  window.cookieconsent.initialise({
+    palette: {
+      popup: { background: "#502c0e" },
+      button: { background: "#ffffff", text: "#502c0e" }
+    },
+    content: {
+      message: "We use cookies to track analytics and improve your experience.",
+      dismiss: "Accept",
+      link: "Learn more",
+      href: "/privacy"
+    }
+  })
+})
+</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<meta name="description" content=“Get in touch with Cameron Craig Photography for bookings, collaborations, or inquiries.”>
@@ -314,6 +332,7 @@
 
 </body>
 </html>
+
 
 
 
