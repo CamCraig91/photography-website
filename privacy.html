@@ -104,99 +104,6 @@
   top: -40px;          /* alternative way to nudge upward */
 }
 
-    .intro {
-      padding: 0px 20px;
-      max-width: 900px;
-      margin: 20px auto;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      align-items: center;
-      background: #fff;
-    }
-    .intro img {
-      width: 100%;
-      max-width: 400px;
-      border-radius: 6px;
-		order: 1;
-    }
-    .intro .text {
-      flex: 1;
-      min-width: 250px;
-      max-width: 400px;
-		order: 2;
-    }
-
-    .portfolio-preview {
-      padding: 0px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .preview-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-    .preview-item {
-      text-align: center;
-      text-decoration: none;
-      color: #000;
-      max-width: 360px;
-    }
-    .preview-item img {
-      width: 100%;
-      max-width: 360px;
-      border-radius: 6px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
-    .preview-item img:hover { transform: scale(1.03); }
-    .preview-item p {
-      margin-top: 10px;
-      font-size: 1.05rem;
-      font-weight: 600;
-    }
-
-    .contact-wrapper {
-      margin-top: 20px;
-      padding: 0px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-	  width: 100%
-      max-width: 1000px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .contact-info, .contact-iframe {
-      flex: 1;
-      min-width: 300px;
-      max-width: 480px;
-    }
-	    .contact-photo {
-      width: 100%;
-      max-width: 400px;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      margin-bottom: 20px;
-      display: block;
-    }
-    .contact-iframe {
-      border-left: none;
-      padding: 0px
-	  max-width:100%
-	  width:100%
-    }
-    .contact-iframe iframe {
-    width: 100%;
-  max-width: 100%;
-  height: 500px;
-  border-radius: 6px;
-    }
-
     footer {
       padding: 20px 40px;
       font-size: 0.9rem;
@@ -238,14 +145,7 @@
         top: 15px;
         right: 20px;
       }
-		.intro {padding: 0px}
-		.intro img {border-radius: 0px; order: 3;}
-		.intro text {padding: 0 20px; }
-		.intro h2 {padding: 0 20px; order: 1;}
-		.intro p {padding: 0 20px; order: 2;}
-		.portfolio-preview {padding: 0px 0px;}
-		.preview-item {max-width: 480px}
-		.preview-item img {padding:0px;border-radius: 0px;max-width: 480px}
+
 		.hero {margin-top: 0px; padding-top:0px; height:100vh;
     background: url('images/heroImagesMobile/DSC07198.jpg') center center no-repeat;
     background-size: cover;
@@ -257,19 +157,7 @@
         width: 100%;
         margin-top: 10px;
       }
-		.contact-wrapper {max-width: 100%}
-		      .contact-info {
-        /* remove line on mobile */
-        padding: 15px;      /* add padding from screen edge */
-      }
-		 .contact-iframe { border-left: none;
-        max-width: 100%;
-		padding-right: 0px;
-        flex: 1 1 100%;
-      } 
-	  .contact-photo { display: block; padding: 0px; max-width: 100%}
-      .contact-iframe iframe { width: 100vw; height: 600px; }
-    }
+
   </style>
 </head>
 <body>
@@ -289,7 +177,11 @@
       </a>
     </div>
   </nav>
-
+	
+  <div class="hero">
+   <h1>Cameron Craig Photography</h1>
+  </div>
+	
   <main>
     <h1>Privacy Policy – Cameron Craig Photography</h1>
     <h2>Introduction</h2>
